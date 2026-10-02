@@ -1,0 +1,157 @@
+{
+  "version": "5.6.0-public.1",
+  "updated": "2026-10-02",
+  "publishing": {
+    "enabled": false,
+    "publisher_root": null,
+    "platforms": [
+      "bilibili"
+    ],
+    "timezone": "Asia/Shanghai",
+    "trigger": "explicit-publish-request",
+    "reference": "references/platform-publishing.md",
+    "note": "Optional external uploader; no uploader, login, account or collection is bundled."
+  },
+  "episode_schema": 2,
+  "output_root": "output",
+  "fallback_root": "output-fallback",
+  "runtime_root": "runtime",
+  "python": "tools/venv/Scripts/python.exe",
+  "font_sans": "tools/NotoSansCJKsc-Regular.otf",
+  "font_serif": "tools/NotoSansCJKsc-Regular.otf",
+  "estimated_output_bytes": 2147483648,
+  "voice": {
+    "gender": "male",
+    "speaker_id": 0,
+    "speed": 1.0,
+    "threads": 4,
+    "target_lufs": -16,
+    "true_peak_db": -2,
+    "paragraph_gap_seconds": 0.24,
+    "unit_gap_seconds": 0.06,
+    "style": "用标准普通话自然地讲述科技资讯。像一位熟悉这些产品的年轻男主播，在向朋友解释刚看到的新闻。清晰、轻松、专注，语速略快但不抢字，有正常的重音起伏和句尾收束。不要拖长尾音，不要逐字朗读，不要夸张播音腔。英文缩写按字母名读，英文产品名按英语发音。",
+    "engine": "qwen3-tts",
+    "speaker": "Dylan",
+    "python": "tools/qwen-tts-venv/Scripts/python.exe",
+    "model_dir": "models/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+    "batch_size": 4,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 30,
+    "repetition_penalty": 1.08
+  },
+  "music": {
+    "enabled": false,
+    "reason": "BGM is disabled by default; enable only when requested.",
+    "style": "morning-bright",
+    "bpm": 104,
+    "target_lufs": -25,
+    "duck_ratio": 2,
+    "duck_threshold": 0.055
+  },
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "crf": 19,
+    "min_seconds": 1,
+    "max_seconds": 900,
+    "target_seconds": 300,
+    "usual_seconds": [
+      270,
+      430
+    ],
+    "usual_news_count": [
+      12,
+      30
+    ],
+    "duration_policy": "Let verified new information and measured speech decide; example ranges are not quotas."
+  },
+  "visual": {
+    "style": "reference-bulletin-blue",
+    "background": "#F6F8FC",
+    "card_background": "#FFFFFF",
+    "ink": "#202938",
+    "accent": "#2862B4",
+    "muted": "#65758C",
+    "nav_background": "#E6EDF7",
+    "border": "#DFE6F0",
+    "tag_background": "#EAF0F8",
+    "card_accents": [
+      "#2862B4",
+      "#4585B7",
+      "#345A8A",
+      "#578A9C"
+    ],
+    "headline_size": 72,
+    "headline_min_size": 52,
+    "card_title_size": 42,
+    "body_size": 34,
+    "body_min_size": 30,
+    "card_padding": 28,
+    "card_radius": 30,
+    "card_gap": 28,
+    "source_size": 20,
+    "nav_top_height": 52,
+    "nav_bottom_height": 64,
+    "overview_nav_label": "总览",
+    "subtitle_size": 46,
+    "subtitle_background": "#626975",
+    "subtitle_color": "#FFFFFF",
+    "subtitle_opacity": 0.76,
+    "subtitle_margin_v": 70,
+    "page_fade_seconds": 0.25,
+    "media_fade_seconds": 0.3,
+    "media_dim_opacity": 0.14,
+    "media_max_width": 1600,
+    "media_max_height": 720,
+    "nav_story_size": 28,
+    "nav_story_min_size": 12,
+    "nav_progress_height": 6
+  },
+  "editorial": {
+    "section_order": [
+      "要闻",
+      "模型发布",
+      "开发生态",
+      "产品应用",
+      "技术与洞察",
+      "行业动态",
+      "前瞻与传闻"
+    ],
+    "empty_sections": "omit",
+    "intro_target_seconds": 10,
+    "outro_target_seconds": 2,
+    "overview": "大家好, Beijing date and weekday, welcome to AI新闻, overview, detailed news; no morning or evening framing",
+    "closing": "今天的资讯播送完了，明天见。",
+    "budget": "derive scene and navigation timing from actual speech; never from card count",
+    "evidence_contract": "event-scoped-v1",
+    "window_policy": "since-previous-or-24h"
+  },
+  "transition_sound": {
+    "enabled": false,
+    "scope": "before every news page",
+    "asset_path": null,
+    "asset_sha256": null,
+    "gain_db": 0.0,
+    "start_offset_seconds": -0.2,
+    "timing_policy": "If enabled, finish the entire authorized click in the preceding narration gap before the next page and speech.",
+    "note": "Recorded reference sound is excluded because redistribution rights are unverified."
+  },
+  "delivery_qa": {
+    "enabled": true,
+    "pronunciation_inventory_required": true,
+    "media_selection_review_required": true,
+    "social_source_review_required": true
+  },
+  "delivery": {
+    "root": "deliveries",
+    "folder_format": "{month}月{day}号ai新闻",
+    "bulletin_label": "新闻",
+    "title_format": "dual-original-short",
+    "title_max_chars": 20,
+    "title_file": "标题.txt",
+    "revision_policy": "First delivery directly in daily folder; subsequent revisions in v02, v03 subfolders; never overwrite prior files.",
+    "unavailable_policy": "Report the explicit delivery path problem; retain checked files in project work. Do not silently redirect finished deliveries."
+  }
+}

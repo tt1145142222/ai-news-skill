@@ -1,0 +1,5 @@
+# Dedicated CUDA-capable environment; install the matching PyTorch CUDA build first.
+# Follow upstream Qwen3-TTS compatibility guidance. Do not install this into production blindly.
+qwen-tts
+numpy
+soundfile

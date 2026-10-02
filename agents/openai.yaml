@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI新闻"
+  short_description: "手动检索核验中文AI新闻，制作蓝色横屏视频、字幕、封面与来源发布包"
+  default_prompt: "使用 $ai-morning-news 核验本期AI消息，制作蓝色横屏新闻并交付视频、字幕、封面和来源发布包。"

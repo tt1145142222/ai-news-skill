@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "fixture": true,
+  "date": "2026-09-11",
+  "cutoff": "2026-09-11T08:00:00+08:00",
+  "news_window": {
+    "previous_delivery": null,
+    "fallback_reason": "本仓库的虚构历史结构样例没有真实的上期交付；仅验证24小时回退结构，未执行新闻采编。"
+  },
+  "title": "结构演练【AI新闻 2026-09-11】",
+  "title_short": "结构演练｜9月11日新闻",
+  "description": "这是虚构的历史结构演练，用于说明episode输入格式；不是实际新闻，不能发布。",
+  "title_claim_ids": ["C01"],
+  "editorial_summary": "本例只有一条明确虚构的消息，用于演示来源、claim、场景、卡片和语音单元的结构联系；未检索现实事件。",
+  "editorial_research": "research.fixture.md",
+  "sources": [
+    {
+      "id": "S01",
+      "publisher": "本地虚构样例",
+      "url": "https://example.org/fixture-only",
+      "type": "fixture",
+      "published_date": "2026-09-11",
+      "published_at": "2026-09-11T07:00:00+08:00",
+      "fetched_at": "2026-09-11T07:30:00+08:00",
+      "read_status": "fixture-local",
+      "snapshot": "sources/S01.fixture.txt"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "这是一条虚构的结构演练消息，不能当作真实新闻发布。",
+      "status": "verified",
+      "limits": "verified仅表示该虚构文本与本地样例快照一致，不表示真实新闻已核验；日期与URL是演练结构。",
+      "evidence": [
+        {
+          "source_id": "S01",
+          "excerpt": "这是一条虚构的结构演练消息，不能当作真实新闻发布。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro",
+      "layout": "overview",
+      "section": "总览",
+      "head": ["虚构结构演练"],
+      "speech": "大家好，这是虚构的结构演练。",
+      "speech_units": [
+        {"text": "大家好，这是虚构的结构演练。", "display": "大家好，这是虚构的结构演练。"}
+      ],
+      "source_ids": ["S01"],
+      "claim_ids": ["C01"],
+      "source_label": "本地虚构样例 · 2026-09-11",
+      "visual": {}
+    },
+    {
+      "id": "news01",
+      "layout": "news",
+      "section": "要闻",
+      "nav_label": "演练",
+      "head": ["虚构消息只用于结构演练"],
+      "speech": "这是一条虚构的结构演练消息，不能当作真实新闻发布。",
+      "speech_units": [
+        {"text": "这是一条虚构的结构演练消息，不能当作真实新闻发布。", "display": "这是一条虚构的结构演练消息，不能当作真实新闻发布。"}
+      ],
+      "source_ids": ["S01"],
+      "claim_ids": ["C01"],
+      "source_label": "本地虚构样例 · 2026-09-11",
+      "editorial": {
+        "subject": "本地结构演练",
+        "event_key": "fixture-structure-demo",
+        "state": "虚构样例",
+        "change_since_previous": "没有前期生产，此项只演示结构关系，不构成新闻新增。",
+        "core_claim_ids": ["C01"],
+        "evidence_mode": "direct",
+        "angle": "区分结构校验与现实事实判断",
+        "order_reason": "本例只有一条虚构消息，位于总览与独立告别之间。"
+      },
+      "visual": {
+        "cards": [
+          {"title": "演练边界", "body": "虚构的结构演练消息，不能当作真实新闻发布。", "claim_ids": ["C01"], "icon": "file"}
+        ]
+      },
+      "media": []
+    },
+    {
+      "id": "outro",
+      "layout": "closing",
+      "section": "结束",
+      "head": ["演练结束"],
+      "speech": "结构演练结束，再见。",
+      "speech_units": [
+        {"text": "结构演练结束，再见。", "display": "结构演练结束，再见。"}
+      ],
+      "source_ids": [],
+      "claim_ids": [],
+      "editorial_only": true,
+      "source_label": "本地虚构样例",
+      "visual": {}
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Main media/ASR environment. Full dependency set is not pinned or clean-install tested.
+numpy
+Pillow
+soundfile
+sherpa-onnx
+imageio-ffmpeg

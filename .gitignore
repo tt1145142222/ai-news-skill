@@ -1,0 +1,32 @@
+# Private configuration, credentials and account/browser state
+config/*.local.json
+.env
+.env.*
+!.env.example
+credentials*
+secrets*
+*cookie*
+*token*.json
+*session*
+auth/
+browser-profile*/
+# Generated media, large dependencies and local runs
+work/
+runtime/
+output/
+output-fallback/
+deliveries/
+models/
+tools/
+.venv*/
+__pycache__/
+*.py[cod]
+*.log
+*.wav
+*.mp3
+*.mp4
+*.zip
+# User-provided click files have separate rights and stay local
+assets/*.local.*
+.DS_Store
+Thumbs.db
